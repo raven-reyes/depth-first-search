@@ -22,10 +22,12 @@ public void addEdge(int i , int j) {
 	adjList[j].add(i); // adding i vertices to vertex j's  linkedList	
 }
 }
-// Time complexity: O(V + E), where V is the number of vertices  and E is the number of edges in the graph.
-// the auxilliary space complexity is O(V) since we have used a visited array of size V
-// the space the algorithm needs to run  is O(V) , because we are pushing V vertices in the call stack
-// Hence, the the total space complexity is O(V + V)
+// The time complexity for this algorithm is O(V+E) where V is the number of Nodes we will visit during execution of this algorithm
+//and E is the number of edges incident to a given vertex v(we are checking or looping over all the edges of every vertex)	
+// the auxilliary space is O(V) because of the extra space of visited array we have created of size V 
+// the space the algorithm needs to run is O(V) because we are pushing V vertices in the call stack
+// therefore , the total space complexity for this algorithm is O(V) + O(V) for auxilliary space
+// Hence, the space complexity this algorithm needs to run is O(V + V)
 public void DFSRecursive(int s,boolean visited []){//s is the source vertex passed and called the main method
 	                                          // visited[] is the array for marking visited vertices
 	visited[s]= true;
